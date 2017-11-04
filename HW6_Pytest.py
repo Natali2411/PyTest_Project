@@ -12,11 +12,11 @@ def test_book_create(app, book):
     print(req_get.json())
     assert req_get.json() == book
 
-def test_book_change(book_new, book_ch):
-    b = book_new.json()
-    resp = book_new.change_book(str(book_new['id']), book_ch)
+def test_book_change(app, book_new, book_ch):
+    # b = book_new.json()
+    resp = app.change_book(str(book_new['id']), book_ch)
     assert 200 <= resp.status_code < 300
-    book_ch['id'] = resp['id']
+    book_ch['id'] = resp.json()['id']
     assert book_ch == resp.json()
 
 

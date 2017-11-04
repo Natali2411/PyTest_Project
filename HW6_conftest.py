@@ -14,7 +14,7 @@ def book():
 @pytest.fixture
 def book_new(app, book):
     t = app.create_book(book)
-    return t
+    return t.json()
 
 @pytest.fixture()
 def book_ch():

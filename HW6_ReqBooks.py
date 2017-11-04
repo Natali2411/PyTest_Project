@@ -9,7 +9,7 @@ class ReqBooks:
         return r
 
     def change_book(self, b_id, book_new):
-        ch_book = requests.put(self.base_url + "books/" + str(b_id), data=book_new)
+        ch_book = requests.put(self.base_url + "books/" + str(b_id) + '/', data=book_new)
         return ch_book
 
     def delete_books(self):
