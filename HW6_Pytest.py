@@ -1,5 +1,5 @@
 import requests
-from HW6_conftest import app, book, book_new, book_ch, book_no_name
+#from conftest import app, book, book_new, book_ch, book_no_name
 
 def test_book_create(app, book):
     response = app.create_book(book)
