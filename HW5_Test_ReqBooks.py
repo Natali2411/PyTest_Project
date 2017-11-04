@@ -1,4 +1,4 @@
-import unittest 
+import unittest
 import requests
 from HW5_ReqBooks import ReqBooks
 
